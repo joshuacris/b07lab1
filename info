@@ -1,2 +1,4 @@
 CSCB07 Lab 1:
   Polynomial Class
+Creating a polynomail class with multiple constructors and methods that can create & evaluate a polynomial, 
+as well as determine if an inputted number is a root of said Polynomial.
