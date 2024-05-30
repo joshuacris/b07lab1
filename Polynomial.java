@@ -190,7 +190,7 @@ public class Polynomial {
 		}
 	}
 	
-	public void savetoFile(String text) throws IOException{
+	public void saveToFile(String text) throws IOException{
 		File to_write = new File(text);
 		FileWriter result = new FileWriter(to_write, false);
 		if (this.exps.length < 1) {

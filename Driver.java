@@ -11,13 +11,13 @@ public class Driver {
 		Polynomial test9 = new Polynomial(new double[] {-1,-1}, new int[] {2, 1});
 		Polynomial result9 = test8.add(test9);
 		result9.printpoly();
-		//result9.savetoFile("c.txt");
+		//result9.saveToFile("c.txt");
 		
 		Polynomial test10 = new Polynomial(new double[] {56, 1}, new int[] {0, 1});
 		Polynomial test11 = new Polynomial(new double[] {1, -56}, new int[] {1, 0});
 		Polynomial result10 = test11.multiply(test10);
 		result10.printpoly();
-		//result10.savetoFile("c.txt");
+		//result10.saveToFile("c.txt");
 		
 		Polynomial test1 = new Polynomial(new double[] {1, 1}, new int[] {1, 0});
 		Polynomial test2 = test1;
@@ -62,7 +62,7 @@ public class Driver {
 		test7.printpoly(); // -101x1 + 8 + 1x2
 		System.out.println("\nnew test\n");
 		Polynomial result3 = test7.multiply(test6);
-		//result3.savetoFile("c.txt");
+		//result3.saveToFile("c.txt");
 		result3.printpoly();
 		System.out.println("\nnew test\n");
 		result3 = test6.multiply(test7);
@@ -77,7 +77,7 @@ public class Driver {
 		result3.printpoly();
 		System.out.println("\nnew test\n");
 		System.out.println(result3.evaluate(23.5));
-		//result3.savetoFile("b.txt");
+		//result3.saveToFile("b.txt");
 		
 		Polynomial test50 = new Polynomial(new double[] {1, 1}, new int[] {1,0});
 		Polynomial test51 = new Polynomial(new double[] {-1, -1}, new int[] {0, 1});
