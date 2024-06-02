@@ -13,11 +13,15 @@ public class Driver {
 		result9.printpoly();
 		//result9.saveToFile("c.txt");
 		
+		System.out.println("\nnew test\n");
+		
 		Polynomial test10 = new Polynomial(new double[] {56, 1}, new int[] {0, 1});
 		Polynomial test11 = new Polynomial(new double[] {1, -56}, new int[] {1, 0});
 		Polynomial result10 = test11.multiply(test10);
 		result10.printpoly();
 		//result10.saveToFile("c.txt");
+		
+		System.out.println("\nnew test\n");
 		
 		Polynomial test1 = new Polynomial(new double[] {1, 1}, new int[] {1, 0});
 		Polynomial test2 = test1;
@@ -32,7 +36,7 @@ public class Driver {
 		//TEST WITH A FILE, NOT INCLUDED IN GIT REPO
 		/*Polynomial test3 = new Polynomial();
 		Polynomial test4 = new Polynomial();
-		test4.savetoFile("d.txt");
+		test4.saveToFile("d.txt");
 		Polynomial test5 = new Polynomial(new File("text.txt"));
 		test5.printpoly(); // -1.5x2 - 1x0 + 3.4x4 - 8.6 - 1x1 + 3x5
 		System.out.println("\nnew test\n"); 
@@ -85,8 +89,6 @@ public class Driver {
 		result50.printpoly();
 		System.out.println(result50.evaluate(24243.3422));
 		System.out.println("root: " + result50.hasRoot(23));
-		
-		
 
 	}
 }

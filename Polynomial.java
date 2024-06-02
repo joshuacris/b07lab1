@@ -9,8 +9,8 @@ public class Polynomial {
 	int [] exps;
 	
 	public Polynomial() {
-		this.coef = new double[0];
-		this.exps = new int[0];
+		this.coef = null;
+		this.exps = null;
 	} 
 	
 	public Polynomial(double [] coeffs, int [] exponents) {
@@ -57,10 +57,10 @@ public class Polynomial {
 	}
 	
 	public Polynomial add(Polynomial p) {
-		if (p.exps.length < 1) {
+		if (p.exps == null) {
 			return this;
 		}
-		if (this.exps.length < 1) {
+		if (this.exps == null) {
 			return p;
 		}
 		int max = p.exps.length + this.exps.length;
@@ -147,11 +147,11 @@ public class Polynomial {
 	
 	public Polynomial multiply(Polynomial p) {
 		
-		if (p.exps.length < 1) {
+		if (p.exps == null) {
 			return p;
 		}
 		
-		if (this.exps.length < 1) {
+		if (this.exps == null) {
 			return this;
 		}
 		Polynomial result = new Polynomial();
@@ -193,7 +193,8 @@ public class Polynomial {
 	public void saveToFile(String text) throws IOException{
 		File to_write = new File(text);
 		FileWriter result = new FileWriter(to_write, false);
-		if (this.exps.length < 1) {
+		if (this.exps == null) {
+			result.write("0.0");
 			result.flush();
 			result.close();
 			return;
@@ -221,18 +222,28 @@ public class Polynomial {
 	
 	public double evaluate(double x) {
 		double results = 0;
-		for (int i = 0; i < coef.length; i++)
-			results += coef[i]*Math.pow(x, exps[i]);
+		if (this.exps == null) {
+			return results;
+		}
+		for (int i = 0; i < this.coef.length; i++)
+			results += this.coef[i]*Math.pow(x, this.exps[i]);
 		return results;
 	}
 	
 	public boolean hasRoot(double k) {
+		if (this.exps == null) {
+			return false;
+		}
 		return evaluate(k) == 0;
 	}
 	
 	//supplementary method
 	
 	public void printpoly() {
+		if (this.exps == null) {
+			System.out.println(0.0);
+			return;
+		}
 		for (int i = 0; i < this.exps.length; i++) {
 	        System.out.println(this.coef[i]+"x^"+this.exps[i]);
 	       }
