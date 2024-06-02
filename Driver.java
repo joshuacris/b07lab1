@@ -6,6 +6,12 @@ import java.io.IOException;
 
 public class Driver {
 	public static void main(String [] args) throws Exception{
+		
+		Polynomial test111 = new Polynomial();
+		System.out.println(test111.evaluate(239402));
+		System.out.println(test111.hasRoot(20432942));
+		test111.printpoly();
+		System.out.println("\nnew test\n");
 
 		Polynomial test8 = new Polynomial(new double[] {1, 1, 2}, new int[] {1, 2, 5});
 		Polynomial test9 = new Polynomial(new double[] {-1,-1}, new int[] {2, 1});

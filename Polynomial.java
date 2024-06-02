@@ -231,9 +231,6 @@ public class Polynomial {
 	}
 	
 	public boolean hasRoot(double k) {
-		if (this.exps == null) {
-			return false;
-		}
 		return evaluate(k) == 0;
 	}
 	
